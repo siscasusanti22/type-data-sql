@@ -1,0 +1,1046 @@
+
+Setting environment for using XAMPP for Windows.
+USER@DESKTOP-B71EEIP c:\xampp
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 20
+Server version: 10.1.25-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| db_opencart        |
+| ecommers           |
+| information_schema |
+| latihan1           |
+| latihan2           |
+| latihan3           |
+| latihan4           |
+| latihandb          |
+| mysql              |
+| opencart           |
+| penjualan          |
+| performance_schema |
+| phpmyadmin         |
+| restoran           |
+| test               |
++--------------------+
+15 rows in set (0.00 sec)
+
+MariaDB [(none)]> use latihandb
+Database changed
+MariaDB [latihandb]> desc sahabat;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| no_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| nama       | varchar(50) | NO   |     | NULL    |       |
+| klm        | varchar(2)  | NO   |     | NULL    |       |
+| tmpt_lahir | varchar(10) | NO   |     | NULL    |       |
+| tgl_lahir  | varchar(25) | NO   |     | NULL    |       |
+| alamat     | varchar(50) | NO   |     | NULL    |       |
+| kota       | varchar(25) | NO   |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+7 rows in set (0.02 sec)
+
+MariaDB [latihandb]> select * from sahabat;
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| 1     | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+| 10    | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+| 11    | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+| 12    | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+| 13    | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+| 14    | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+| 15    | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+| 16    | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+| 17    | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+| 18    | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+| 19    | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+| 2     | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+| 20    | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+| 21    | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+| 22    | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+| 23    | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+| 24    | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+| 25    | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
+| 3     | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+| 4     | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+| 5     | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+| 6     | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+| 7     | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+| 8     | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+| 9     | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat;
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| db_opencart        |
+| ecommers           |
+| information_schema |
+| latihan1           |
+| latihan2           |
+| latihan3           |
+| latihan4           |
+| latihandb          |
+| mysql              |
+| opencart           |
+| penjualan          |
+| performance_schema |
+| phpmyadmin         |
+| restoran           |
+| test               |
++--------------------+
+15 rows in set (0.00 sec)
+
+MariaDB [latihandb]> use latihandb;
+Database changed
+MariaDB [latihandb]> desc sahabat;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| no_id      | int(5)      | NO   | PRI | NULL    |       |
+| nama       | varchar(50) | NO   |     | NULL    |       |
+| klm        | varchar(2)  | NO   |     | NULL    |       |
+| tmpt_lahir | varchar(10) | NO   |     | NULL    |       |
+| tgl_lahir  | varchar(25) | NO   |     | NULL    |       |
+| alamat     | varchar(50) | NO   |     | NULL    |       |
+| kota       | varchar(25) | NO   |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+7 rows in set (0.03 sec)
+
+MariaDB [latihandb]> select * from sahabat;
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where no_id, nama, tmpt_lahir, tgl_lahir;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' nama, tmpt_lahir, tgl_lahir' at line 2
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir;
+ERROR 1054 (42S22): Unknown column 'no_id' in 'field list'
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat;
++-------+------------------+------------+------------+
+| no_id | nama             | tmpt_lahir | tgl_lahir  |
++-------+------------------+------------+------------+
+|     1 | Ahmad Subhan     | Medan      | 1977-09-29 |
+|     2 | Benny Sukmana    | Bogor      | 1971-06-22 |
+|     3 | Subono           | Semarang   | 1975-04-19 |
+|     4 | Richard Buntaran | Medan      | 1981-05-17 |
+|     5 | Carla Karmelita  | Manado     | 1978-06-09 |
+|     6 | Chintiawati      | Cianjur    | 1976-01-13 |
+|     7 | Oka Sulaksana    | Denpasar   | 1978-11-07 |
+|     8 | Dwi Dirgantara   | Surabaya   | 1975-02-07 |
+|     9 | Ramli Sokoco     | Madiun     | 1982-04-17 |
+|    10 | Sri Sundari      | Samarang   | 1978-12-19 |
+|    11 | Dwikoro Jatmiko  | Bogor      | 1976-06-16 |
+|    12 | Dhamayanti       | Cirebon    | 1984-08-18 |
+|    13 | Dharmanwangsa    | Batam      | 1977-07-09 |
+|    14 | Syarifa Firdaus  | Cianjur    | 1986-01-19 |
+|    15 | Royan Surya      | Bogor      | 1979-01-23 |
+|    16 | Ginanjar         | Cibinong   | 1979-03-21 |
+|    17 | Gina Sonia       | Bogor      | 1982-09-12 |
+|    18 | Bartiniwati      | Surakarta  | 1975-04-12 |
+|    19 | Ian Susilo       | Palembang  | 1978-10-11 |
+|    20 | Indri Jelita     | Bengkulu   | 1983-07-19 |
+|    21 | Junita Santiago  | Padang     | 1980-11-09 |
+|    22 | Moh. Umar        | Malang     | 1973-12-25 |
+|    23 | Aisyah Kamila    | Semarang   | 1980-10-03 |
+|    24 | Rita Nurjannah   | Surabaya   | 1981-10-10 |
+|    25 | Indah Mumpuni    | Malang     | 1974-02-09 |
++-------+------------------+------------+------------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat;
++-------+------------------+------------+------------+
+| no_id | nama             | tmpt_lahir | tgl_lahir  |
++-------+------------------+------------+------------+
+|     1 | Ahmad Subhan     | Medan      | 1977-09-29 |
+|     2 | Benny Sukmana    | Bogor      | 1971-06-22 |
+|     3 | Subono           | Semarang   | 1975-04-19 |
+|     4 | Richard Buntaran | Medan      | 1981-05-17 |
+|     5 | Carla Karmelita  | Manado     | 1978-06-09 |
+|     6 | Chintiawati      | Cianjur    | 1976-01-13 |
+|     7 | Oka Sulaksana    | Denpasar   | 1978-11-07 |
+|     8 | Dwi Dirgantara   | Surabaya   | 1975-02-07 |
+|     9 | Ramli Sokoco     | Madiun     | 1982-04-17 |
+|    10 | Sri Sundari      | Samarang   | 1978-12-19 |
+|    11 | Dwikoro Jatmiko  | Bogor      | 1976-06-16 |
+|    12 | Dhamayanti       | Cirebon    | 1984-08-18 |
+|    13 | Dharmanwangsa    | Batam      | 1977-07-09 |
+|    14 | Syarifa Firdaus  | Cianjur    | 1986-01-19 |
+|    15 | Royan Surya      | Bogor      | 1979-01-23 |
+|    16 | Ginanjar         | Cibinong   | 1979-03-21 |
+|    17 | Gina Sonia       | Bogor      | 1982-09-12 |
+|    18 | Bartiniwati      | Surakarta  | 1975-04-12 |
+|    19 | Ian Susilo       | Palembang  | 1978-10-11 |
+|    20 | Indri Jelita     | Bengkulu   | 1983-07-19 |
+|    21 | Junita Santiago  | Padang     | 1980-11-09 |
+|    22 | Moh. Umar        | Malang     | 1973-12-25 |
+|    23 | Aisyah Kamila    | Semarang   | 1980-10-03 |
+|    24 | Rita Nurjannah   | Surabaya   | 1981-10-10 |
+|    25 | Indah Mumpuni    | Malang     | 1974-02-09 |
++-------+------------------+------------+------------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir
+    -> where klm='P' from sahabat;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where klm='P' from sahabat' at line 2
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat;
++-------+------------------+------------+------------+
+| no_id | nama             | tmpt_lahir | tgl_lahir  |
++-------+------------------+------------+------------+
+|     1 | Ahmad Subhan     | Medan      | 1977-09-29 |
+|     2 | Benny Sukmana    | Bogor      | 1971-06-22 |
+|     3 | Subono           | Semarang   | 1975-04-19 |
+|     4 | Richard Buntaran | Medan      | 1981-05-17 |
+|     5 | Carla Karmelita  | Manado     | 1978-06-09 |
+|     6 | Chintiawati      | Cianjur    | 1976-01-13 |
+|     7 | Oka Sulaksana    | Denpasar   | 1978-11-07 |
+|     8 | Dwi Dirgantara   | Surabaya   | 1975-02-07 |
+|     9 | Ramli Sokoco     | Madiun     | 1982-04-17 |
+|    10 | Sri Sundari      | Samarang   | 1978-12-19 |
+|    11 | Dwikoro Jatmiko  | Bogor      | 1976-06-16 |
+|    12 | Dhamayanti       | Cirebon    | 1984-08-18 |
+|    13 | Dharmanwangsa    | Batam      | 1977-07-09 |
+|    14 | Syarifa Firdaus  | Cianjur    | 1986-01-19 |
+|    15 | Royan Surya      | Bogor      | 1979-01-23 |
+|    16 | Ginanjar         | Cibinong   | 1979-03-21 |
+|    17 | Gina Sonia       | Bogor      | 1982-09-12 |
+|    18 | Bartiniwati      | Surakarta  | 1975-04-12 |
+|    19 | Ian Susilo       | Palembang  | 1978-10-11 |
+|    20 | Indri Jelita     | Bengkulu   | 1983-07-19 |
+|    21 | Junita Santiago  | Padang     | 1980-11-09 |
+|    22 | Moh. Umar        | Malang     | 1973-12-25 |
+|    23 | Aisyah Kamila    | Semarang   | 1980-10-03 |
+|    24 | Rita Nurjannah   | Surabaya   | 1981-10-10 |
+|    25 | Indah Mumpuni    | Malang     | 1974-02-09 |
++-------+------------------+------------+------------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat
+    -> where klm="P';
+    "> ;';
+    "> ;
+    "> ;;
+    "> * sahabat;
+    "> ";
+Empty set (0.00 sec)
+
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat
+    -> where klm="P";
++-------+-----------------+------------+------------+
+| no_id | nama            | tmpt_lahir | tgl_lahir  |
++-------+-----------------+------------+------------+
+|     5 | Carla Karmelita | Manado     | 1978-06-09 |
+|     6 | Chintiawati     | Cianjur    | 1976-01-13 |
+|     7 | Oka Sulaksana   | Denpasar   | 1978-11-07 |
+|    10 | Sri Sundari     | Samarang   | 1978-12-19 |
+|    12 | Dhamayanti      | Cirebon    | 1984-08-18 |
+|    14 | Syarifa Firdaus | Cianjur    | 1986-01-19 |
+|    17 | Gina Sonia      | Bogor      | 1982-09-12 |
+|    18 | Bartiniwati     | Surakarta  | 1975-04-12 |
+|    20 | Indri Jelita    | Bengkulu   | 1983-07-19 |
+|    21 | Junita Santiago | Padang     | 1980-11-09 |
+|    22 | Moh. Umar       | Malang     | 1973-12-25 |
+|    24 | Rita Nurjannah  | Surabaya   | 1981-10-10 |
+|    25 | Indah Mumpuni   | Malang     | 1974-02-09 |
++-------+-----------------+------------+------------+
+13 rows in set (0.00 sec)
+
+MariaDB [latihandb]>
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat;
++-------+------------------+------------+------------+
+| no_id | nama             | tmpt_lahir | tgl_lahir  |
++-------+------------------+------------+------------+
+|     1 | Ahmad Subhan     | Medan      | 1977-09-29 |
+|     2 | Benny Sukmana    | Bogor      | 1971-06-22 |
+|     3 | Subono           | Semarang   | 1975-04-19 |
+|     4 | Richard Buntaran | Medan      | 1981-05-17 |
+|     5 | Carla Karmelita  | Manado     | 1978-06-09 |
+|     6 | Chintiawati      | Cianjur    | 1976-01-13 |
+|     7 | Oka Sulaksana    | Denpasar   | 1978-11-07 |
+|     8 | Dwi Dirgantara   | Surabaya   | 1975-02-07 |
+|     9 | Ramli Sokoco     | Madiun     | 1982-04-17 |
+|    10 | Sri Sundari      | Samarang   | 1978-12-19 |
+|    11 | Dwikoro Jatmiko  | Bogor      | 1976-06-16 |
+|    12 | Dhamayanti       | Cirebon    | 1984-08-18 |
+|    13 | Dharmanwangsa    | Batam      | 1977-07-09 |
+|    14 | Syarifa Firdaus  | Cianjur    | 1986-01-19 |
+|    15 | Royan Surya      | Bogor      | 1979-01-23 |
+|    16 | Ginanjar         | Cibinong   | 1979-03-21 |
+|    17 | Gina Sonia       | Bogor      | 1982-09-12 |
+|    18 | Bartiniwati      | Surakarta  | 1975-04-12 |
+|    19 | Ian Susilo       | Palembang  | 1978-10-11 |
+|    20 | Indri Jelita     | Bengkulu   | 1983-07-19 |
+|    21 | Junita Santiago  | Padang     | 1980-11-09 |
+|    22 | Moh. Umar        | Malang     | 1973-12-25 |
+|    23 | Aisyah Kamila    | Semarang   | 1980-10-03 |
+|    24 | Rita Nurjannah   | Surabaya   | 1981-10-10 |
+|    25 | Indah Mumpuni    | Malang     | 1974-02-09 |
++-------+------------------+------------+------------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat
+    -> where klm="P";
++-------+-----------------+------------+------------+
+| no_id | nama            | tmpt_lahir | tgl_lahir  |
++-------+-----------------+------------+------------+
+|     5 | Carla Karmelita | Manado     | 1978-06-09 |
+|     6 | Chintiawati     | Cianjur    | 1976-01-13 |
+|     7 | Oka Sulaksana   | Denpasar   | 1978-11-07 |
+|    10 | Sri Sundari     | Samarang   | 1978-12-19 |
+|    12 | Dhamayanti      | Cirebon    | 1984-08-18 |
+|    14 | Syarifa Firdaus | Cianjur    | 1986-01-19 |
+|    17 | Gina Sonia      | Bogor      | 1982-09-12 |
+|    18 | Bartiniwati     | Surakarta  | 1975-04-12 |
+|    20 | Indri Jelita    | Bengkulu   | 1983-07-19 |
+|    21 | Junita Santiago | Padang     | 1980-11-09 |
+|    22 | Moh. Umar       | Malang     | 1973-12-25 |
+|    24 | Rita Nurjannah  | Surabaya   | 1981-10-10 |
+|    25 | Indah Mumpuni   | Malang     | 1974-02-09 |
++-------+-----------------+------------+------------+
+13 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select no_id, nama, tmpt_lahir, tgl_lahir from sahabat
+    -> where klm="L";
++-------+------------------+------------+------------+
+| no_id | nama             | tmpt_lahir | tgl_lahir  |
++-------+------------------+------------+------------+
+|     1 | Ahmad Subhan     | Medan      | 1977-09-29 |
+|     2 | Benny Sukmana    | Bogor      | 1971-06-22 |
+|     3 | Subono           | Semarang   | 1975-04-19 |
+|     4 | Richard Buntaran | Medan      | 1981-05-17 |
+|     8 | Dwi Dirgantara   | Surabaya   | 1975-02-07 |
+|     9 | Ramli Sokoco     | Madiun     | 1982-04-17 |
+|    11 | Dwikoro Jatmiko  | Bogor      | 1976-06-16 |
+|    13 | Dharmanwangsa    | Batam      | 1977-07-09 |
+|    15 | Royan Surya      | Bogor      | 1979-01-23 |
+|    16 | Ginanjar         | Cibinong   | 1979-03-21 |
+|    19 | Ian Susilo       | Palembang  | 1978-10-11 |
+|    23 | Aisyah Kamila    | Semarang   | 1980-10-03 |
++-------+------------------+------------+------------+
+12 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir !="Malang";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+23 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir="Malang";
++-------+---------------+-----+------------+------------+-----------------+--------+
+| no_id | nama          | klm | tmpt_lahir | tgl_lahir  | alamat          | kota   |
++-------+---------------+-----+------------+------------+-----------------+--------+
+|    22 | Moh. Umar     | P   | Malang     | 1973-12-25 | Jl. Citandui 52 | Malang |
+|    25 | Indah Mumpuni | P   | Malang     | 1974-02-09 | Jl. Sumbing 123 | Malang |
++-------+---------------+-----+------------+------------+-----------------+--------+
+2 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir="Surabaya";
++-------+----------------+-----+------------+------------+----------------------+----------+
+| no_id | nama           | klm | tmpt_lahir | tgl_lahir  | alamat               | kota     |
++-------+----------------+-----+------------+------------+----------------------+----------+
+|     8 | Dwi Dirgantara | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B | Surabaya |
+|    24 | Rita Nurjannah | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76      | Surabaya |
++-------+----------------+-----+------------+------------+----------------------+----------+
+2 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir="Bogor";
++-------+-----------------+-----+------------+------------+-----------------------+---------+
+| no_id | nama            | klm | tmpt_lahir | tgl_lahir  | alamat                | kota    |
++-------+-----------------+-----+------------+------------+-----------------------+---------+
+|     2 | Benny Sukmana   | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87  | Bandung |
+|    11 | Dwikoro Jatmiko | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23 | Bogor   |
+|    15 | Royan Surya     | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93      | Bogor   |
+|    17 | Gina Sonia      | P   | Bogor      | 1982-09-12 | Jl. Citarum 53        | Bogor   |
++-------+-----------------+-----+------------+------------+-----------------------+---------+
+4 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir !="Malang", "Surabaya", "Bogor";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' "Surabaya", "Bogor"' at line 2
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir !="Malang, Surabaya, Bogor";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tgl_lahir >= "1973-01-01"
+    -> and tgl_lahir <="1977-12-31"
+    -> order by tgl_lahir;
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+| no_id | nama            | klm | tmpt_lahir | tgl_lahir  | alamat                   | kota     |
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+|    22 | Moh. Umar       | P   | Malang     | 1973-12-25 | Jl. Citandui 52          | Malang   |
+|    25 | Indah Mumpuni   | P   | Malang     | 1974-02-09 | Jl. Sumbing 123          | Malang   |
+|     8 | Dwi Dirgantara  | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B     | Surabaya |
+|    18 | Bartiniwati     | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen | Malang   |
+|     3 | Subono          | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63 | Solo     |
+|     6 | Chintiawati     | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100        | Surabaya |
+|    11 | Dwikoro Jatmiko | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23    | Bogor    |
+|    13 | Dharmanwangsa   | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77   | Bandung  |
+|     1 | Ahmad Subhan    | L   | Medan      | 1977-09-29 | Jl. Arjono 123           | Medan    |
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+9 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tgl_lahir >= "1973-01-01"
+    -> and tgl_lahir <="1977-12-31"
+    -> where klm="L"
+    -> order by nama;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where klm="L"
+order by nama' at line 4
+MariaDB [latihandb]> select * from sahabat
+    -> where tgl_lahir >= "1973-01-01"
+    -> and tgl_lahir <="1977-12-31"
+    -> or klm="L"
+    -> order by nama;
++-------+------------------+-----+------------+------------+--------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                   | kota     |
++-------+------------------+-----+------------+------------+--------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123           | Medan    |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15 | Semarang |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen | Malang   |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87     | Bandung  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100        | Surabaya |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77   | Bandung  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B     | Surabaya |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23    | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100       | Riau     |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42    | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123          | Malang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52          | Malang   |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54        | Madiun   |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312  | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93         | Bogor    |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63 | Solo     |
++-------+------------------+-----+------------+------------+--------------------------+----------+
+16 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama like "a%";
++-------+---------------+-----+------------+------------+--------------------------+----------+
+| no_id | nama          | klm | tmpt_lahir | tgl_lahir  | alamat                   | kota     |
++-------+---------------+-----+------------+------------+--------------------------+----------+
+|     1 | Ahmad Subhan  | L   | Medan      | 1977-09-29 | Jl. Arjono 123           | Medan    |
+|    23 | Aisyah Kamila | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15 | Semarang |
++-------+---------------+-----+------------+------------+--------------------------+----------+
+2 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama like "%a"
+    -> order by nama;
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+| no_id | nama            | klm | tmpt_lahir | tgl_lahir  | alamat                   | kota     |
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+|    23 | Aisyah Kamila   | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15 | Semarang |
+|     2 | Benny Sukmana   | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87     | Bandung  |
+|     5 | Carla Karmelita | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90     | Jakarta  |
+|    13 | Dharmanwangsa   | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77   | Bandung  |
+|     8 | Dwi Dirgantara  | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B     | Surabaya |
+|    17 | Gina Sonia      | P   | Bogor      | 1982-09-12 | Jl. Citarum 53           | Bogor    |
+|    20 | Indri Jelita    | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21        | Bengkulu |
+|     7 | Oka Sulaksana   | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75        | Jakarta  |
+|    15 | Royan Surya     | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93         | Bogor    |
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+9 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama like "%n%"
+    -> order by nama;
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+19 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama like !="%n"
+    -> where nama like !="%a"
+    -> order by nama;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '!="%n"
+where nama like !="%a"
+order by nama' at line 2
+MariaDB [latihandb]> select * from sahabat where nama !="%n";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama !="n";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama !="a";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama !="ahmad";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama !="ahmad";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama !="Ahmad";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where like "%n";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'like "%n"' at line 1
+MariaDB [latihandb]> select * from sahabat where nama like "%n";
++-------+------------------+-----+------------+------------+-------------------------+--------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                  | kota   |
++-------+------------------+-----+------------+------------+-------------------------+--------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123          | Medan  |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312 | Malang |
++-------+------------------+-----+------------+------------+-------------------------+--------+
+2 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama like "!%n";
+Empty set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama like "%!n";
+Empty set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama like ! "%n";
+Empty set, 3 warnings (0.01 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama ! like "%n";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '! like "%n"' at line 1
+MariaDB [latihandb]> select * from sahabat where nama !=like "%n";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'like "%n"' at line 1
+MariaDB [latihandb]> select * from sahabat where nama like !="%n";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '!="%n"' at line 1
+MariaDB [latihandb]> select * from sahabat where nama !="%n";
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir !="Medan"
+    -> and alamat !="Manado"
+    -> and alamat !="Denpasar"
+    -> ;
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama            | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+|     2 | Benny Sukmana   | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     3 | Subono          | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|     5 | Carla Karmelita | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati     | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     7 | Oka Sulaksana   | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     8 | Dwi Dirgantara  | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|     9 | Ramli Sokoco    | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari     | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    11 | Dwikoro Jatmiko | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    12 | Dhamayanti      | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa   | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|    14 | Syarifa Firdaus | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    15 | Royan Surya     | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    16 | Ginanjar        | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    17 | Gina Sonia      | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    18 | Bartiniwati     | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo      | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    20 | Indri Jelita    | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar       | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    23 | Aisyah Kamila   | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    24 | Rita Nurjannah  | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    25 | Indah Mumpuni   | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+23 rows in set (0.02 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where tmpt_lahir !="Medan"
+    -> and tmpt_lahir !="Manado"
+    -> and tmpt_lahir !="Denpasar"
+    -> and tmpt_lahir !="Surabaya"
+    -> and tmpt_lahir !="Batam"
+    -> and tmpt_lahir !="Bogor"
+    -> and tmpt_lahir !="Bengkulu"
+    -> and tmpt_lahir !="Semarang";
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama            | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+|     6 | Chintiawati     | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|     9 | Ramli Sokoco    | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    10 | Sri Sundari     | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|    12 | Dhamayanti      | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    14 | Syarifa Firdaus | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
+|    16 | Ginanjar        | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    18 | Bartiniwati     | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|    19 | Ian Susilo      | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    21 | Junita Santiago | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar       | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|    25 | Indah Mumpuni   | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+11 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama !="%a"
+    -> and nama !="%n"
+    -> order by nama;
++-------+------------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama             | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+|     1 | Ahmad Subhan     | L   | Medan      | 1977-09-29 | Jl. Arjono 123            | Medan    |
+|    23 | Aisyah Kamila    | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15  | Semarang |
+|    18 | Bartiniwati      | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|     2 | Benny Sukmana    | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87      | Bandung  |
+|     5 | Carla Karmelita  | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90      | Jakarta  |
+|     6 | Chintiawati      | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|    12 | Dhamayanti       | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    13 | Dharmanwangsa    | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77    | Bandung  |
+|     8 | Dwi Dirgantara   | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B      | Surabaya |
+|    11 | Dwikoro Jatmiko  | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    17 | Gina Sonia       | P   | Bogor      | 1982-09-12 | Jl. Citarum 53            | Bogor    |
+|    16 | Ginanjar         | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    19 | Ian Susilo       | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    25 | Indah Mumpuni    | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
+|    20 | Indri Jelita     | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21         | Bengkulu |
+|    21 | Junita Santiago  | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar        | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|     7 | Oka Sulaksana    | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75         | Jakarta  |
+|     9 | Ramli Sokoco     | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|     4 | Richard Buntaran | L   | Medan      | 1981-05-17 | Jl. Untung Suropati 312   | Malang   |
+|    24 | Rita Nurjannah   | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    15 | Royan Surya      | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93          | Bogor    |
+|    10 | Sri Sundari      | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|     3 | Subono           | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|    14 | Syarifa Firdaus  | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
++-------+------------------+-----+------------+------------+---------------------------+----------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat
+    -> where nama not like "%n"
+    -> and nama not like "%a"
+    -> order by nama;
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+| no_id | nama            | klm | tmpt_lahir | tgl_lahir  | alamat                    | kota     |
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+|    18 | Bartiniwati     | P   | Surakarta  | 1975-04-12 | Jl. Sidoutomo 2 Kepanjen  | Malang   |
+|     6 | Chintiawati     | P   | Cianjur    | 1976-01-13 | Jl. Kesatrian 100         | Surabaya |
+|    12 | Dhamayanti      | P   | Cirebon    | 1984-08-18 | Jl. Gatot Subroto 124     | Cirebon  |
+|    11 | Dwikoro Jatmiko | L   | Bogor      | 1976-06-16 | Jl. Sungai Citarum 23     | Bogor    |
+|    16 | Ginanjar        | L   | Cibinong   | 1979-03-21 | Jl. Ahmad Yani 100        | Riau     |
+|    19 | Ian Susilo      | L   | Palembang  | 1978-10-11 | Jl. Raden Saleh II/42     | Surabaya |
+|    25 | Indah Mumpuni   | P   | Malang     | 1974-02-09 | Jl. Sumbing 123           | Malang   |
+|    21 | Junita Santiago | P   | Padang     | 1980-11-09 | Jl. Mayjend. Panjaitan 45 | Padang   |
+|    22 | Moh. Umar       | P   | Malang     | 1973-12-25 | Jl. Citandui 52           | Malang   |
+|     9 | Ramli Sokoco    | L   | Madiun     | 1982-04-17 | Jl, Sunan Giri 54         | Madiun   |
+|    24 | Rita Nurjannah  | P   | Surabaya   | 1981-10-10 | Jl. Sidodadi 76           | Surabaya |
+|    10 | Sri Sundari     | P   | Samarang   | 1978-12-19 | Jl. Ambarawa 93           | Samarang |
+|     3 | Subono          | L   | Semarang   | 1975-04-19 | Jl. Panglima Sudirman 63  | Solo     |
+|    14 | Syarifa Firdaus | P   | Cianjur    | 1986-01-19 | Jl. Raden Rahmad 32       | Malang   |
++-------+-----------------+-----+------------+------------+---------------------------+----------+
+14 rows in set (0.00 sec)
+
+MariaDB [latihandb]> Bye
+
+USER@DESKTOP-B71EEIP c:\xampp
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 227
+Server version: 10.1.25-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use latihandb;
+Database changed
+MariaDB [latihandb]> select no_id, nama, alamat from sahabat where alamat is null
+    -> order by nama;
+Empty set (0.00 sec)
+
+MariaDB [latihandb]> select no_id, nama, alamat from sahabat where alamat is not null
+    -> order by nama;
++-------+------------------+---------------------------+
+| no_id | nama             | alamat                    |
++-------+------------------+---------------------------+
+|     1 | Ahmad Subhan     | Jl. Arjono 123            |
+|    23 | Aisyah Kamila    | Jl. Panglima Sudirman 15  |
+|    18 | Bartiniwati      | Jl. Sidoutomo 2 Kepanjen  |
+|     2 | Benny Sukmana    | Jl. Letjen Sutoyo 87      |
+|     5 | Carla Karmelita  | Jl. Merdeka Barat 90      |
+|     6 | Chintiawati      | Jl. Kesatrian 100         |
+|    12 | Dhamayanti       | Jl. Gatot Subroto 124     |
+|    13 | Dharmanwangsa    | Jl. Kolonel Sugiono 77    |
+|     8 | Dwi Dirgantara   | Jl. Sidotopo IV/621B      |
+|    11 | Dwikoro Jatmiko  | Jl. Sungai Citarum 23     |
+|    17 | Gina Sonia       | Jl. Citarum 53            |
+|    16 | Ginanjar         | Jl. Ahmad Yani 100        |
+|    19 | Ian Susilo       | Jl. Raden Saleh II/42     |
+|    25 | Indah Mumpuni    | Jl. Sumbing 123           |
+|    20 | Indri Jelita     | Jl. Ahmad Yani 21         |
+|    21 | Junita Santiago  | Jl. Mayjend. Panjaitan 45 |
+|    22 | Moh. Umar        | Jl. Citandui 52           |
+|     7 | Oka Sulaksana    | Jl. Daan Mogot 75         |
+|     9 | Ramli Sokoco     | Jl, Sunan Giri 54         |
+|     4 | Richard Buntaran | Jl. Untung Suropati 312   |
+|    24 | Rita Nurjannah   | Jl. Sidodadi 76           |
+|    15 | Royan Surya      | Jl. Asparagus 93          |
+|    10 | Sri Sundari      | Jl. Ambarawa 93           |
+|     3 | Subono           | Jl. Panglima Sudirman 63  |
+|    14 | Syarifa Firdaus  | Jl. Raden Rahmad 32       |
++-------+------------------+---------------------------+
+25 rows in set (0.00 sec)
+
+MariaDB [latihandb]> select * from sahabat where nama regexp "a$";
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+| no_id | nama            | klm | tmpt_lahir | tgl_lahir  | alamat                   | kota     |
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+|     2 | Benny Sukmana   | L   | Bogor      | 1971-06-22 | Jl. Letjen Sutoyo 87     | Bandung  |
+|     5 | Carla Karmelita | P   | Manado     | 1978-06-09 | Jl. Merdeka Barat 90     | Jakarta  |
+|     7 | Oka Sulaksana   | P   | Denpasar   | 1978-11-07 | Jl. Daan Mogot 75        | Jakarta  |
+|     8 | Dwi Dirgantara  | L   | Surabaya   | 1975-02-07 | Jl. Sidotopo IV/621B     | Surabaya |
+|    13 | Dharmanwangsa   | L   | Batam      | 1977-07-09 | Jl. Kolonel Sugiono 77   | Bandung  |
+|    15 | Royan Surya     | L   | Bogor      | 1979-01-23 | Jl. Asparagus 93         | Bogor    |
+|    17 | Gina Sonia      | P   | Bogor      | 1982-09-12 | Jl. Citarum 53           | Bogor    |
+|    20 | Indri Jelita    | P   | Bengkulu   | 1983-07-19 | Jl. Ahmad Yani 21        | Bengkulu |
+|    23 | Aisyah Kamila   | L   | Semarang   | 1980-10-03 | Jl. Panglima Sudirman 15 | Semarang |
++-------+-----------------+-----+------------+------------+--------------------------+----------+
+9 rows in set (0.05 sec)
+
+MariaDB [latihandb]>
